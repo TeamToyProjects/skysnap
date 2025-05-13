@@ -22,12 +22,12 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/TeamToyProjects/skysnap/blob/main/images/209439252.png" width="150px" height="150px"><br>
+      <img src="https://github.com/TeamToyProjects/skysnap/blob/main/images/%EC%86%8C%EC%97%B0%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="150px" height="150px"><br>
       <b>김소연 (BE)</b><br>
       <a href="https://github.com/soyonic">soyonic</a>
     </td>
     <td align="center">
-      <img src="https://github.com/TeamToyProjects/skysnap/blob/main/images/%ED%94%84%EB%A1%9C%ED%95%84.png" width="150px" height="150px"><br>
+      <img src="https://github.com/TeamToyProjects/skysnap/blob/main/images/%EC%9D%80%EC%98%81%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="150px" height="150px"><br>
       <b>민은영 (BE)</b><br>
       <a href="https://github.com/minequals0">minequals0</a>
     </td>
