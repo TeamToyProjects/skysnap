@@ -11,6 +11,6 @@ public class AirportCsvDto {
     private String isoCountry;  // 국가코드
     private String iataCode;  // IATA 코드
     private String icaoCode;  // ICAO 코드
-    private String latitudeDeg;  // 위도(북남쪽)
-    private String longitudeDeg;  // 경도(동서쪽)
+    private double latitudeDeg;  // 위도(북남쪽)
+    private double longitudeDeg;  // 경도(동서쪽)
 }
