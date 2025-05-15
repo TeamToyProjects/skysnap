@@ -13,8 +13,8 @@ public class AirportDto {
     private String country;
     private String iata;
     private String icao;
-    private String latitude;
-    private String longitude;
+    private double latitude;
+    private double longitude;
 
 
 }
