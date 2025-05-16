@@ -1,6 +1,7 @@
 package com.toyproject.skysnap.airportdat.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,10 +14,21 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AirportResponseDto {
     private String name; // 공항 이름
+
+    @JsonProperty("iata_code")
     private String iata;
+
+    @JsonProperty("icao_code")
     private String icao;
+
+    @JsonProperty("municipality")
     private String city;
-    private String country;
-    private Double latitude; // null 가능성 고려해 Double로
+
+    private CountryDto country;
+
+    @JsonProperty("latitude_deg")
+    private Double latitude;
+
+    @JsonProperty("longitude_deg")
     private Double longitude;
 }
