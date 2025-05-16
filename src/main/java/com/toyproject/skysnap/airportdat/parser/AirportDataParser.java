@@ -56,12 +56,15 @@ public class AirportDataParser {
 
     // 주어진 도시명에 해당하는 ICAO 코드 리스트를 반환하는 메서드
     public List<String> findIcaoByCity(String cityName) {
-        return airportList.stream()
+        List<String> result = airportList.stream()
                 .filter(a -> a.getCity().equalsIgnoreCase(cityName))
                 .map(AirportInfo::getIcao)
                 .filter(code -> code != null && !code.isEmpty())
                 .distinct()
                 .collect(Collectors.toList());
+
+        System.out.println("도시명: " + cityName + " → ICAO 코드 리스트: " + result);
+        return result;
     }
 
 }
