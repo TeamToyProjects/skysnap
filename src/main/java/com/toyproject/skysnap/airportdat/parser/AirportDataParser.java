@@ -25,7 +25,7 @@ public class AirportDataParser {
     // 초기화 메서드 정의 - dat파일 읽는 작업
     public void init() throws IOException {
         // 파일 경로 지정
-        Path path = Paths.get("src/main/resource/airports.dat");
+        Path path = Paths.get("src/main/resources/airports.dat");
         // 파일 읽기 위해 BufferReader 생성
         try (BufferedReader br = Files.newBufferedReader(path)) {
             String line; // 한 줄씩 읽기 위해 선언
