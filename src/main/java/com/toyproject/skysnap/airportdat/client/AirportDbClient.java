@@ -23,25 +23,26 @@ public class AirportDbClient {
     }
 
     public AirportResponseDto getAirportByIcao(String icao) {
-        String url = String.format("https://airportdb.io/api/v1/airport/icao/%s", icao);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setBearerAuth(apiToken);
-        HttpEntity<Void> entity = new HttpEntity<>(headers);
+        // API URL 수정
+        String url = String.format("https://airportdb.io/api/v1/airport/%s?apiToken=%s", icao, apiToken);
 
         try {
+            // ❌ 더 이상 헤더 필요 없음
             ResponseEntity<AirportResponseDto> response = restTemplate.exchange(
                     url,
                     HttpMethod.GET,
-                    entity,
+                    null, // 헤더 필요 X
                     AirportResponseDto.class
             );
+            // 빈 응답을 위해 로그 출력
+            System.out.println("API 응답: " + response.getBody());
+
             return response.getBody();
 
         } catch (Exception e) {
-            // 디버깅용
-            //System.err.println("공항 정보를 불러오지 못했습니다. (ICAO: " + icao + ")");
-            //System.err.println("Reason: " + e.getMessage());
+            // 좀 더 자세한 로그 출력
+            System.err.printf("ICAO 코드 %s 조회 실패: %s%n", icao, e.getMessage());
+            e.printStackTrace();
             return null;
         }
 
