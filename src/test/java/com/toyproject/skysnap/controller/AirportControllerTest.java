@@ -1,6 +1,5 @@
 package com.toyproject.skysnap.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.toyproject.skysnap.airportdat.controller.AirportController;
 import com.toyproject.skysnap.airportdat.dto.AirportResponseDto;
 import com.toyproject.skysnap.airportdat.dto.CountryDto;
@@ -29,9 +28,6 @@ public class AirportControllerTest {
 
     @MockBean
     private AirportService airportService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
 
     @DisplayName("도시명으로 공항 리스트 조회 API 테스트")
     @Test
