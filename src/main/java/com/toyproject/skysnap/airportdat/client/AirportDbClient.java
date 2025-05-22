@@ -13,7 +13,7 @@ import org.springframework.http.HttpHeaders;
 // ICAO 코드 이용해 AirportDB api 호출
 @Component
 public class AirportDbClient {
-    @Value("${airportdb.api.token}") // 원래는 "${API_TOKEN}" 테스트해보기
+    @Value("${airportdb.api.token}") // ${API_TOKEN}, ${airportdb.api.token} 둘 다 됨
     private String apiToken;
 
     private final RestTemplate restTemplate;

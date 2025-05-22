@@ -1,7 +1,7 @@
 package com.toyproject.skysnap.airportdat.parser;
 
 
-import com.toyproject.skysnap.airportdat.model.AirportInfo;
+import com.toyproject.skysnap.airportdat.model.AirportInfoParser;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Component
 public class AirportDataParser {
     // 공항 정보를 저장할 리스트를 생성. AirportInfo 객체들을 담는 용도
-    private final List<AirportInfo> airportList = new ArrayList<>();
+    private final List<AirportInfoParser> airportList = new ArrayList<>();
 
     // 스프링이 빈 생성 후 초기화 작업할 때 실행할 메서드 지정
     @PostConstruct
@@ -42,7 +42,7 @@ public class AirportDataParser {
                     String icao = stripQuotes(tokens[5]);
 
                     // 공항 정보를 AirportInfo 객체로 만들고 리스트에 추가
-                    airportList.add(new AirportInfo(name, city, country, iata, icao));
+                    airportList.add(new AirportInfoParser(name, city, country, iata, icao));
                 }
             }
         }
@@ -58,7 +58,7 @@ public class AirportDataParser {
     public List<String> findIcaoByCity(String cityName) {
         List<String> result = airportList.stream()
                 .filter(a -> a.getCity().equalsIgnoreCase(cityName))
-                .map(AirportInfo::getIcao)
+                .map(AirportInfoParser::getIcao)
                 .filter(code -> code != null && !code.isEmpty())
                 .distinct()
                 .collect(Collectors.toList());
