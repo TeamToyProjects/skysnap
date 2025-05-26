@@ -11,6 +11,10 @@ public class FlightSearchRequest {
     private LocalDate departureDate;  // 출발일
     private LocalDate returnDate;    // 도착일, 선택 옵션, null 가능
 
+    private int seatCount;  // 좌석수
+    private boolean isChild;  // T면 어린이, F면 성인
+
+//    private SeatType seatType; // 좌석등급
     private boolean baggageRequired;
     private boolean mealRequired;
 
