@@ -1,5 +1,6 @@
 package com.toyproject.skysnap.filghtsearch.service;
 
+import com.toyproject.skysnap.airportdat.dto.AirportResponseDto;
 import com.toyproject.skysnap.airportdat.model.AirportInfoParser;
 import com.toyproject.skysnap.filghtsearch.model.FlightOption;
 import org.springframework.stereotype.Service;
@@ -12,8 +13,8 @@ import java.util.List;
 
 @Service
 public class MockAirlineService {
-    public List<FlightOption> getAvailableFlights(AirportInfoParser from,
-                                                  AirportInfoParser to,
+    public List<FlightOption> getAvailableFlights(AirportResponseDto from,
+                                                  AirportResponseDto to,
                                                   LocalDate date) {
         // 출발 시간, 도착 시간 예시 설정
         LocalDateTime depTime1 = LocalDateTime.of(date, LocalTime.of(8, 0));
