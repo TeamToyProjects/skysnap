@@ -1,8 +1,7 @@
-package com.toyproject.skysnap.filghtsearch.service;
+package com.toyproject.skysnap.flightsearch.service;
 
 import com.toyproject.skysnap.airportdat.dto.AirportResponseDto;
-import com.toyproject.skysnap.airportdat.model.AirportInfoParser;
-import com.toyproject.skysnap.filghtsearch.model.FlightOption;
+import com.toyproject.skysnap.flightsearch.model.FlightOption;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

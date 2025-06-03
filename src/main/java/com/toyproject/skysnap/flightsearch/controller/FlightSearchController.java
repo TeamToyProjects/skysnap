@@ -1,9 +1,9 @@
-package com.toyproject.skysnap.filghtsearch.controller;
+package com.toyproject.skysnap.flightsearch.controller;
 
 
-import com.toyproject.skysnap.filghtsearch.dto.FlightSearchRequest;
-import com.toyproject.skysnap.filghtsearch.dto.FlightSearchResponse;
-import com.toyproject.skysnap.filghtsearch.service.FlightSearchService;
+import com.toyproject.skysnap.flightsearch.dto.FlightSearchRequest;
+import com.toyproject.skysnap.flightsearch.dto.FlightSearchResponse;
+import com.toyproject.skysnap.flightsearch.service.FlightSearchService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

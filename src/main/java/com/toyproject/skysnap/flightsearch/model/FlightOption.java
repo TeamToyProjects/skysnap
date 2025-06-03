@@ -1,4 +1,4 @@
-package com.toyproject.skysnap.filghtsearch.model;
+package com.toyproject.skysnap.flightsearch.model;
 
 
 import lombok.*;

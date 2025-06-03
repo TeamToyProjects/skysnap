@@ -1,4 +1,4 @@
-package com.toyproject.skysnap.filghtsearch.dto;
+package com.toyproject.skysnap.flightsearch.dto;
 
 
 import jakarta.validation.constraints.Min;

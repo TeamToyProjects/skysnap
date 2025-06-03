@@ -1,7 +1,7 @@
-package com.toyproject.skysnap.filghtsearch.dto;
+package com.toyproject.skysnap.flightsearch.dto;
 
 
-import com.toyproject.skysnap.filghtsearch.model.FlightOption;
+import com.toyproject.skysnap.flightsearch.model.FlightOption;
 import lombok.*;
 
 import java.util.List;
@@ -13,5 +13,5 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class FlightSearchResponse {
-    List<FlightOption> FlightOptions;
+    List<FlightOption> flightOptions;
 }
