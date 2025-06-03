@@ -23,11 +23,15 @@ public class AirportDbClient {
     }
 
     public AirportResponseDto getAirportByIcao(String icao) {
+        // apiToken이 환경변수에 추가됐는지 체크
+        if (apiToken == null || apiToken.isEmpty()) {
+            throw new IllegalStateException("API 토큰이 없습니다. 환경 변수나 application.yml에 토큰을 설정하세요.");
+        }
         // API URL 수정
         String url = String.format("https://airportdb.io/api/v1/airport/%s?apiToken=%s", icao, apiToken);
 
         try {
-            // ❌ 더 이상 헤더 필요 없음
+            // 더 이상 헤더 필요 없음
             ResponseEntity<AirportResponseDto> response = restTemplate.exchange(
                     url,
                     HttpMethod.GET,
