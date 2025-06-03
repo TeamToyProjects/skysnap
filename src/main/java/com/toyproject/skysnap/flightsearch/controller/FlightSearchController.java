@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 // 사용자 검색 요청을 받아 검색 결과를 응답
 @RestController
-@RequestMapping("/api/filghts")
+@RequestMapping("/api/flights")
 public class FlightSearchController {
     private final FlightSearchService flightSearchService;
 
